@@ -140,7 +140,7 @@ export default function App() {
                   </div>
                   <div>
                     <p className="text-[10px] font-mono text-slate-500 uppercase tracking-widest mb-1">Phone</p>
-                    <a href="tel:8074223801" className="text-slate-300 hover:text-white transition-colors">8074223801</a>
+                    <a href="tel:8074223801" className="text-slate-300 hover:text-white transition-colors"></a>
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
