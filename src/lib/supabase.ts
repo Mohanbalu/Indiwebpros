@@ -10,7 +10,12 @@ export function getSupabase() {
     
     // Direct check of process.env for Node, and import.meta.env for bundle
     let url = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL || metaEnv.VITE_SUPABASE_URL || '';
-    let key = process.env.SUPABASE_ANON_KEY || process.env.VITE_SUPABASE_ANON_KEY || metaEnv.VITE_SUPABASE_ANON_KEY || '';
+    let key = process.env.SUPABASE_ANON_KEY || 
+              process.env.VITE_SUPABASE_ANON_KEY || 
+              process.env.SUPABASE_KEY || 
+              process.env.VITE_SUPABASE_KEY || 
+              metaEnv.VITE_SUPABASE_ANON_KEY || 
+              '';
 
     let supabaseUrl = String(url).trim();
     let supabaseAnonKey = String(key).trim();
@@ -22,7 +27,13 @@ export function getSupabase() {
     if (!supabaseUrl || !supabaseAnonKey) {
       const status = `URL=${supabaseUrl ? 'PRESENT' : 'MISSING'}, KEY=${supabaseAnonKey ? 'PRESENT' : 'MISSING'}`;
       console.error(`Supabase Config Check: ${status}`);
-      throw new Error(`Supabase credentials missing (${status}). Please check your environment variables in Settings.`);
+      
+      let hint = "Please ensure you have added both SUPABASE_URL and SUPABASE_ANON_KEY in the Settings > Environment Variables menu.";
+      if (supabaseUrl && !supabaseAnonKey) {
+        hint = "URL is detected, but KEY is missing. Did you name it SUPABASE_ANON_KEY?";
+      }
+      
+      throw new Error(`Supabase credentials missing (${status}). ${hint}`);
     }
 
     if (!supabaseUrl.startsWith('http')) {
