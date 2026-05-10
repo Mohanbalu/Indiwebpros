@@ -84,6 +84,8 @@ export function InternshipSection() {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
+    phone: "",
+    whatsapp: "",
     college: "",
     degree: "",
     year: "1st Year",
@@ -745,6 +747,8 @@ export function InternshipSection() {
                       setFormData({
                         fullName: "",
                         email: "",
+                        phone: "",
+                        whatsapp: "",
                         college: "",
                         degree: "",
                         year: "1st Year",
@@ -843,11 +847,19 @@ export function InternshipSection() {
                                 <label className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em]">Enterprise Email</label>
                                 <input required name="email" value={formData.email} onChange={handleInputChange} type="email" spellCheck={false} className="w-full px-0 py-3 bg-transparent border-b border-slate-200 focus:border-indigo-600 transition-all text-sm outline-none font-medium placeholder:text-slate-200" placeholder="JULIAN@MAIL.COM" />
                               </div>
+                              <div className="space-y-3">
+                                <label className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em]">Mobile Contact</label>
+                                <input required name="phone" value={formData.phone} onChange={handleInputChange} type="tel" spellCheck={false} className="w-full px-0 py-3 bg-transparent border-b border-slate-200 focus:border-indigo-600 transition-all text-sm outline-none font-medium placeholder:text-slate-200" placeholder="+91 XXX XXX XXXX" />
+                              </div>
+                              <div className="space-y-3">
+                                <label className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em]">Messaging Channel (WhatsApp)</label>
+                                <input required name="whatsapp" value={formData.whatsapp} onChange={handleInputChange} type="tel" spellCheck={false} className="w-full px-0 py-3 bg-transparent border-b border-slate-200 focus:border-indigo-600 transition-all text-sm outline-none font-medium placeholder:text-slate-200" placeholder="+91 XXX XXX XXXX" />
+                              </div>
                             </div>
                           </div>
                           <div className="flex gap-px bg-slate-100 pt-4">
                             <button type="button" onClick={prevStep} className="px-10 py-5 bg-white border border-slate-100 text-[10px] font-bold uppercase tracking-widest hover:bg-slate-50 transition-colors">Previous</button>
-                            <button type="button" onClick={nextStep} disabled={!formData.fullName || !formData.email} className="flex-1 py-5 bg-slate-900 text-white text-[10px] font-bold uppercase tracking-widest hover:bg-black transition-colors disabled:opacity-50">
+                            <button type="button" onClick={nextStep} disabled={!formData.fullName || !formData.email || !formData.phone || !formData.whatsapp} className="flex-1 py-5 bg-slate-900 text-white text-[10px] font-bold uppercase tracking-widest hover:bg-black transition-colors disabled:opacity-50">
                                Validate Identity
                             </button>
                           </div>
