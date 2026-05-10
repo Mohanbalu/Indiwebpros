@@ -20,6 +20,8 @@ export async function saveToDatabase(data: any) {
       payload = {
         full_name: data.Name,
         email: data.Email,
+        phone: data.Phone,
+        whatsapp: data.WhatsApp,
         college: data.College,
         degree: data.Degree,
         year: data.Year,
