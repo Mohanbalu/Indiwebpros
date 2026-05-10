@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion } from "motion/react";
-import { ArrowRight, Mail, MapPin, Phone, CheckCircle2, Loader2 } from "lucide-react";
+import { ArrowRight, Mail, MapPin, CheckCircle2, Loader2 } from "lucide-react";
 
 export function ContactSection() {
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
@@ -16,7 +16,6 @@ export function ContactSection() {
     const data = {
       name: formData.get('name'),
       email: formData.get('email'),
-      phone: formData.get('phone'),
       message: formData.get('message'),
     };
 
@@ -89,19 +88,11 @@ export function ContactSection() {
                 </div>
                 <div>
                   <p className="text-xs font-mono text-slate-400 uppercase tracking-widest">Email Us</p>
-                  <p className="text-slate-900 font-medium">mohanbalu292@gmail.com</p>
+                  <p className="text-slate-900 font-medium">admin@indiwebpros.in</p>
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 group">
-                <div className="w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center group-hover:bg-emerald-600 transition-colors">
-                  <Phone className="w-5 h-5 text-slate-400 group-hover:text-white" />
-                </div>
-                <div>
-                  <p className="text-xs font-mono text-slate-400 uppercase tracking-widest">WhatsApp / Call</p>
-                  <p className="text-slate-900 font-medium">8074223801</p>
-                </div>
-              </div>
+
 
               <div className="flex items-center gap-4 group">
                 <div className="w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center group-hover:bg-indigo-600 transition-colors">
@@ -181,16 +172,6 @@ export function ContactSection() {
                       className="w-full px-5 py-4 bg-white border border-slate-200 rounded-2xl text-slate-900 placeholder:text-slate-300 focus:outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/5 transition-all"
                     />
                   </div>
-                </div>
-                <div className="space-y-2">
-                  <label className="text-xs font-mono text-slate-400 uppercase tracking-widest px-1">Phone Number</label>
-                  <input 
-                    required
-                    name="phone"
-                    type="tel" 
-                    placeholder="+91 98765 43210"
-                    className="w-full px-5 py-4 bg-white border border-slate-200 rounded-2xl text-slate-900 placeholder:text-slate-300 focus:outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/5 transition-all"
-                  />
                 </div>
                 <div className="space-y-2">
                   <label className="text-xs font-mono text-slate-400 uppercase tracking-widest px-1">Message</label>
