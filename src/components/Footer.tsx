@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Twitter, Linkedin, Github, Mail, Phone, MapPin } from "lucide-react";
+import { Twitter, Linkedin, Github, Mail, MapPin } from "lucide-react";
 import { Logo } from "./ui/Logo";
 
 export function Footer() {
@@ -72,18 +72,10 @@ export function Footer() {
                 </div>
                 <div>
                   <p className="text-[10px] font-mono text-slate-500 uppercase tracking-widest mb-1">Email</p>
-                  <a href="mailto:mohanbalu292@gmail.com" className="text-slate-300 hover:text-white transition-colors">mohanbalu292@gmail.com</a>
+                  <a href="mailto:admin@indiwebpros.in" className="text-slate-300 hover:text-white transition-colors">admin@indiwebpros.in</a>
                 </div>
               </li>
-              <li className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-5 h-5 text-emerald-400" />
-                </div>
-                <div>
-                  <p className="text-[10px] font-mono text-slate-500 uppercase tracking-widest mb-1">Phone</p>
-                  <a href="tel:8074223801" className="text-slate-300 hover:text-white transition-colors">8074223801</a>
-                </div>
-              </li>
+
               <li className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center flex-shrink-0">
                   <MapPin className="w-5 h-5 text-rose-400" />
