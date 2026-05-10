@@ -19,6 +19,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       Source: 'Internship Application', 
       Name: data.fullName || 'Anonymous', 
       Email: data.email, 
+      Phone: data.phone || '',
+      WhatsApp: data.whatsapp || '',
       College: data.college || '', 
       Degree: data.degree || '', 
       Year: data.year || '', 
