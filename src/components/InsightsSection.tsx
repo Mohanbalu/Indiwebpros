@@ -23,6 +23,13 @@ const insights = [
     description: "Exploring the next generation of web frameworks and how they impact site performance and SEO.",
     icon: TrendingUp,
     keywords: ["Web Trends", "SEO Performance", "Next-Gen Tech"]
+  },
+  {
+    category: "Academic Support",
+    title: "Essential Guide to Major & Minor Projects in 2026",
+    description: "Everything you need to know about selecting, developing, and presenting high-quality engineering projects for your final year.",
+    icon: BookOpen,
+    keywords: ["Major Projects", "Minor Projects", "Project Documentation", "B.Tech Projects"]
   }
 ];
 
@@ -61,7 +68,7 @@ export function InsightsSection() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {insights.map((item, idx) => (
             <motion.div
               key={item.title}
