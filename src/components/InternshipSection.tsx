@@ -149,6 +149,39 @@ export function InternshipSection() {
 
   return (
     <div id="internship" className="w-full bg-white selection:bg-indigo-100">
+      {/* FAQ Structured Data for SEO */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Is the major project internship online?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, the internship is fully virtual, allowing students from anywhere to participate in major and minor projects."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you provide documentation for minor projects?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, we provide full code, comprehensive documentation, and presentation support for both major and minor student projects."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Are certificates provided for final year projects?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Absolutely! Upon successful completion of your internship or project, you will receive an official Professional Certificate."
+              }
+            }
+          ]
+        })}
+      </script>
       
       {/* SECTION 1 — HERO SECTION */}
       <section className="relative w-full min-h-[95vh] flex items-center justify-center overflow-hidden bg-[#0A0A0B] pt-20">
@@ -177,8 +210,9 @@ export function InternshipSection() {
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             className="text-6xl md:text-[8.5rem] lg:text-[10rem] font-display font-light text-white leading-[0.8] tracking-tighter mb-16"
           >
-            INDIWEB<span className="italic font-display font-thin text-indigo-500">PROS</span> <br />
-            <span className="text-4xl md:text-5xl uppercase tracking-[0.4em] font-mono font-bold text-slate-500 mt-8 block">PROGRAM</span>
+            MAJOR & MINOR <br />
+            <span className="italic font-display font-thin text-indigo-500">PROJECTS</span> <br />
+            <span className="text-4xl md:text-5xl uppercase tracking-[0.4em] font-mono font-bold text-slate-500 mt-8 block">INTERNSHIP</span>
           </motion.h1>
 
           <motion.p
@@ -187,8 +221,8 @@ export function InternshipSection() {
             transition={{ delay: 0.3 }}
             className="max-w-xl mx-auto text-base md:text-lg text-slate-400 font-light leading-relaxed mb-16 border-x border-white/5 px-8"
           >
-            A high-performance training ground for building production-grade systems. 
-            Master the architecture of the modern web alongside industrial mentors.
+            A high-performance training ground for building production-grade major projects and minor projects. 
+            Master the architecture of modern systems alongside industrial mentors.
           </motion.p>
 
           <motion.div
