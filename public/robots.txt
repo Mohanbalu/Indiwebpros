@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://indiwebpros.com/sitemap.xml
+Sitemap: https://indiwebpros.in/sitemap.xml
