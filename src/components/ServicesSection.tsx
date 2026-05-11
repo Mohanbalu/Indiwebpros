@@ -8,17 +8,25 @@ import {
   Smartphone, 
   Database, 
   ShieldCheck, 
-  Zap 
+  Zap,
+  Book
 } from "lucide-react";
 import { cn } from "@/src/lib/utils";
 
 const services = [
   {
-    title: "Custom Web Development",
-    description: "High-performance, SEO-optimized websites for businesses and student portfolios using React and Next.js.",
-    features: ["Business Websites", "Student Portfolios", "E-commerce Solutions"],
+    title: "Professional Web Development",
+    description: "High-performance, SEO-optimized professional web development for businesses and student project portfolios using React, Next.js, and modern AI tools.",
+    features: ["Enterprise Business Websites", "Student Major Project Portfolios", "E-commerce & SaaS Solutions"],
     icon: Globe,
     color: "bg-blue-500/10 text-blue-500",
+  },
+  {
+    title: "Major & Minor Projects",
+    description: "Expert guidance for final year major projects and semester minor projects. We provide code, documentation, and presentation support.",
+    features: ["B.Tech Final Year Projects", "IEEE Project Implementation", "MS & PhD Research Support"],
+    icon: Book,
+    color: "bg-indigo-500/10 text-indigo-500",
   },
   {
     title: "AI & Business Automation",
