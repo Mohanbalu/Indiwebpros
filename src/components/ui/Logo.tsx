@@ -20,7 +20,11 @@ export function Logo({ className, iconClassName }: LogoProps) {
           fill="none" 
           xmlns="http://www.w3.org/2000/svg"
           className="w-3/4 h-3/4"
+          role="img"
+          aria-labelledby="logoTitle logoDesc"
         >
+          <title id="logoTitle">Indiwebpros Logo</title>
+          <desc id="logoDesc">A professional hexagonal logo representing web development and engineering expertise.</desc>
           <defs>
             <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stopColor="#6366f1" /> {/* Indigo-500 */}
