@@ -27,14 +27,14 @@ export function SplineSceneBasic() {
           </div>
           
           <h1 className="text-5xl md:text-7xl font-extrabold text-slate-900 leading-[1.05] tracking-tight">
-            Ship your <br className="hidden md:block" /> 
+            Major & Minor <br className="hidden md:block" /> 
             <span className="text-indigo-600">
-              Digital Vision
+              Project Experts
             </span>
           </h1>
           
           <p className="mt-8 text-slate-500 text-lg md:text-xl max-w-lg mx-auto md:mx-0 leading-relaxed font-normal">
-            We bridge the gap between complex engineering and elegant design. High-performance websites and full-stack projects for students and businesses.
+            We bridge the gap between complex engineering and elegant design. High-performance websites, AI solutions, and specialized major/minor projects for students and businesses.
           </p>
 
           <div className="mt-12 flex flex-col sm:flex-row items-center justify-center md:justify-start gap-5">
