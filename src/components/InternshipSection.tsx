@@ -91,7 +91,8 @@ export function InternshipSection() {
     year: "1st Year",
     domain: "",
     skills: "",
-    reason: ""
+    reason: "",
+    referralCode: "NA"
   });
 
   const totalSteps = 4;
@@ -788,7 +789,8 @@ export function InternshipSection() {
                         year: "1st Year",
                         domain: "",
                         skills: "",
-                        reason: ""
+                        reason: "",
+                        referralCode: "NA"
                       });
                     }}
                     className="mt-10 px-8 py-4 bg-slate-900 text-white text-xs font-bold uppercase tracking-widest hover:bg-slate-800 transition-all"
@@ -888,6 +890,10 @@ export function InternshipSection() {
                               <div className="space-y-3">
                                 <label className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em]">Messaging Channel (WhatsApp)</label>
                                 <input required name="whatsapp" value={formData.whatsapp} onChange={handleInputChange} type="tel" spellCheck={false} className="w-full px-0 py-3 bg-transparent border-b border-slate-200 focus:border-indigo-600 transition-all text-sm outline-none font-medium placeholder:text-slate-200" placeholder="+91 XXX XXX XXXX" />
+                              </div>
+                              <div className="space-y-3">
+                                <label className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em]">Referral Code (Optional)</label>
+                                <input name="referralCode" value={formData.referralCode} onChange={handleInputChange} type="text" spellCheck={false} className="w-full px-0 py-3 bg-transparent border-b border-slate-200 focus:border-indigo-600 transition-all text-sm outline-none font-medium placeholder:text-slate-200" placeholder="ENTER CODE OR 'NA'" />
                               </div>
                             </div>
                           </div>
