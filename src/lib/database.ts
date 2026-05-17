@@ -28,6 +28,7 @@ export async function saveToDatabase(data: any) {
         domain: data.Domain,
         skills: data.Skills,
         reason: data.Reason,
+        referral_code: data.ReferralCode,
         source: data.Source
       };
     } else {
