@@ -86,7 +86,8 @@ apiRouter.post("/internship-apply", async (req, res) => {
       Year: data.year || '', 
       Domain: data.domain || '',
       Skills: data.skills || '', 
-      Reason: data.reason || ''
+      Reason: data.reason || '',
+      ReferralCode: data.referralCode || 'NA'
     });
 
     if (!result.success) {
